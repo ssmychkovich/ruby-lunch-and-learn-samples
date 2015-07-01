@@ -1,0 +1,54 @@
+class Person
+{
+  public string name{get;set;}
+  public int age{get;set;}
+
+  public Person(string name, int age){
+    this.name = name;
+    this.age = age;
+  }
+}
+
+List<Person> people = new List<Person>();
+people.Add(new Person("John", 20));
+people.Add(new Person("Peter", 23));
+
+foreach (string name in people.Select(s => s.name).ToArray())
+{
+  Console.WriteLine(name);
+}
+
+
+
+
+class Person
+  attr_accessor :name, :age
+  
+  def initialize(name, age)
+    self.name = name
+    self.age = age 
+  end
+end
+
+
+people = []
+people.push Person.new('John', 20)
+people.push Person.new('Peter', 23)
+
+people.map(&:name).each do |name|
+  puts name
+end
+
+
+
+DateTime.Today.AddDays(-2);
+DateTime.Today.AddDays(-14);
+
+2.days.ago
+2.weeks.ago
+
+
+--------------------
+contents.Skip(1).ToArray()
+
+contents[1..-1]
